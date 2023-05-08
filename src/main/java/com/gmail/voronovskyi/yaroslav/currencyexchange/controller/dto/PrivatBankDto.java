@@ -1,4 +1,4 @@
-package com.gmail.voronovskyi.yaroslav.controller.dto;
+package com.gmail.voronovskyi.yaroslav.currencyexchange.controller.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;

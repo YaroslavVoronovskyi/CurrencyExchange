@@ -1,4 +1,4 @@
-package com.gmail.voronovskyi.yaroslav.controller.dto;
+package com.gmail.voronovskyi.yaroslav.currencyexchange.model;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -7,19 +7,26 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 
+@Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class MinfinDto implements Serializable {
+@Table(name = "minfins")
+public class Minfin implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @Id
     private String id;
+
     private String pointDate;
     private String date;
     private String ask;

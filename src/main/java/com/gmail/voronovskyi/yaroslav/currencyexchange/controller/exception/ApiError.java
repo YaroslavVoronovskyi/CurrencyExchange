@@ -1,4 +1,4 @@
-package com.gmail.voronovskyi.yaroslav.controller.exception;
+package com.gmail.voronovskyi.yaroslav.currencyexchange.controller.exception;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;

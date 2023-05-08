@@ -1,0 +1,31 @@
+2023-05-08 13:13:17 INFO  [com.gmail.voronovskyi.yaroslav.currencyexchange.Application:main]- Starting Application using Java 11.0.17 on Yaroslavs-MacBook-Pro.local with PID 29039 (/Users/yaroslav/IdeaProjects/TestTask/build/classes/java/main started by yaroslav in /Users/yaroslav/IdeaProjects/TestTask)
+2023-05-08 13:13:17 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.Application:main]- Running with Spring Boot v2.7.12-SNAPSHOT, Spring v5.3.28-SNAPSHOT
+2023-05-08 13:13:17 INFO  [com.gmail.voronovskyi.yaroslav.currencyexchange.Application:main]- No active profile set, falling back to 1 default profile: "default"
+2023-05-08 13:13:23 INFO  [com.gmail.voronovskyi.yaroslav.currencyexchange.Application:main]- Started Application in 6.176 seconds (JVM running for 6.758)
+2023-05-08 13:13:28 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.controller.MonoBankRestController:http-nio-8085-exec-1]- Try get monoBanks from source and save
+2023-05-08 13:13:28 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.service.impl.MonoBankService:http-nio-8085-exec-1]- Try save monoBanks from source to DB
+2023-05-08 13:13:28 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.service.impl.MonoBankService:http-nio-8085-exec-1]- MonoBanks was successfully saved from source to DB
+2023-05-08 13:13:28 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.controller.MonoBankRestController:http-nio-8085-exec-1]- MonoBanks was successfully got from source and saved
+2023-05-08 13:13:28 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.controller.MonoBankRestController:http-nio-8085-exec-1]- Try get all monoBanks
+2023-05-08 13:13:28 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.service.impl.MonoBankService:http-nio-8085-exec-1]- Try get all monoBanks from DB
+2023-05-08 13:13:28 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.service.impl.MonoBankService:http-nio-8085-exec-1]- All monoBanks was successfully got from DB
+2023-05-08 13:13:32 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.controller.PrivatBankRestController:http-nio-8085-exec-3]- Try get privatBanks from source and save
+2023-05-08 13:13:33 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.service.impl.PrivateBankService:http-nio-8085-exec-3]- Try save privatBanks from source to DB
+2023-05-08 13:13:33 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.service.impl.PrivateBankService:http-nio-8085-exec-3]- PrivatBanks was successfully saved from source to DB
+2023-05-08 13:13:33 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.controller.PrivatBankRestController:http-nio-8085-exec-3]- PrivatBanks was successfully got from source and saved
+2023-05-08 13:13:33 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.controller.PrivatBankRestController:http-nio-8085-exec-3]- Try get all privatBanks
+2023-05-08 13:13:33 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.service.impl.PrivateBankService:http-nio-8085-exec-3]- Try get all privatBanks from DB
+2023-05-08 13:13:33 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.service.impl.PrivateBankService:http-nio-8085-exec-3]- All privatBanks was successfully got from DB
+2023-05-08 13:13:46 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.controller.PrivatBankRestController:http-nio-8085-exec-4]- Try search privatBanks by date 2023-05-08
+2023-05-08 13:13:46 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.service.impl.PrivateBankService:http-nio-8085-exec-4]- Try get privatBanks with date 2023-05-08 from DB
+2023-05-08 13:13:46 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.service.impl.PrivateBankService:http-nio-8085-exec-4]- All privatBanks with date 2023-05-08 was successfully got from DB
+2023-05-08 13:13:51 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.controller.PrivatBankRestController:http-nio-8085-exec-5]- Try get privatBanks from source and save
+2023-05-08 13:13:52 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.service.impl.PrivateBankService:http-nio-8085-exec-5]- Try save privatBanks from source to DB
+2023-05-08 13:13:52 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.service.impl.PrivateBankService:http-nio-8085-exec-5]- PrivatBanks was successfully saved from source to DB
+2023-05-08 13:13:52 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.controller.PrivatBankRestController:http-nio-8085-exec-5]- PrivatBanks was successfully got from source and saved
+2023-05-08 13:13:52 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.controller.PrivatBankRestController:http-nio-8085-exec-5]- Try get all privatBanks
+2023-05-08 13:13:52 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.service.impl.PrivateBankService:http-nio-8085-exec-5]- Try get all privatBanks from DB
+2023-05-08 13:13:52 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.service.impl.PrivateBankService:http-nio-8085-exec-5]- All privatBanks was successfully got from DB
+2023-05-08 13:13:56 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.controller.PrivatBankRestController:http-nio-8085-exec-6]- Try search privatBanks by date 2023-05-08
+2023-05-08 13:13:56 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.service.impl.PrivateBankService:http-nio-8085-exec-6]- Try get privatBanks with date 2023-05-08 from DB
+2023-05-08 13:13:56 DEBUG [com.gmail.voronovskyi.yaroslav.currencyexchange.service.impl.PrivateBankService:http-nio-8085-exec-6]- All privatBanks with date 2023-05-08 was successfully got from DB

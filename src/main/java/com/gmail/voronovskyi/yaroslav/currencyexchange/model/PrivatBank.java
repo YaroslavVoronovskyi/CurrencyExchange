@@ -1,4 +1,4 @@
-package com.gmail.voronovskyi.yaroslav.model;
+package com.gmail.voronovskyi.yaroslav.currencyexchange.model;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -21,8 +21,8 @@ import java.io.Serializable;
 @NoArgsConstructor
 @ToString
 @EqualsAndHashCode
-@Table(name = "mono")
-public class MonoBank implements Serializable {
+@Table(name = "privats")
+public class PrivatBank implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -30,10 +30,10 @@ public class MonoBank implements Serializable {
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
-    private String currencyCodeA;
-    private String currencyCodeB;
+
+    private String ccy;
+    private String baseCcy;
+    private String buy;
+    private String sale;
     private String date;
-    private String rateSell;
-    private String rateBuy;
-    private String rateCross;
 }

@@ -1,0 +1,231 @@
+2023-05-08 13:13:19 INFO  [org.apache.coyote.http11.Http11NioProtocol:main]- Initializing ProtocolHandler ["http-nio-8085"]
+2023-05-08 13:13:19 INFO  [org.apache.catalina.core.StandardService:main]- Starting service [Tomcat]
+2023-05-08 13:13:19 INFO  [org.apache.catalina.core.StandardEngine:main]- Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-08 13:13:19 INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:main]- Initializing Spring embedded WebApplicationContext
+2023-05-08 13:13:19 INFO  [org.hibernate.jpa.internal.util.LogHelper:main]- HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-08 13:13:19 INFO  [org.hibernate.Version:main]- HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-05-08 13:13:20 INFO  [org.hibernate.annotations.common.Version:main]- HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-08 13:13:20 INFO  [com.zaxxer.hikari.HikariDataSource:main]- HikariPool-1 - Starting...
+2023-05-08 13:13:20 INFO  [com.zaxxer.hikari.HikariDataSource:main]- HikariPool-1 - Start completed.
+2023-05-08 13:13:20 INFO  [org.hibernate.dialect.Dialect:main]- HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-05-08 13:13:21 INFO  [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:main]- HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-08 13:13:21 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:main]- Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2023-05-08 13:13:21 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:main]- Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2023-05-08 13:13:21 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:main]- Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2023-05-08 13:13:21 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:main]- Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2023-05-08 13:13:21 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:main]- Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2023-05-08 13:13:21 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:main]- Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2023-05-08 13:13:21 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:main]- Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2023-05-08 13:13:21 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:main]- Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2023-05-08 13:13:21 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:main]- Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2023-05-08 13:13:21 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:main]- Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2023-05-08 13:13:21 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:main]- Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2023-05-08 13:13:22 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:main]- Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2023-05-08 13:13:22 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:main]- Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2023-05-08 13:13:22 INFO  [org.apache.coyote.http11.Http11NioProtocol:main]- Starting ProtocolHandler ["http-nio-8085"]
+2023-05-08 13:13:28 INFO  [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:http-nio-8085-exec-1]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-08 13:13:28 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:http-nio-8085-exec-1]- Session Metrics {
+    535889 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    4094683 nanoseconds spent preparing 115 JDBC statements;
+    23084489 nanoseconds spent executing 115 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    47236661 nanoseconds spent executing 1 flushes (flushing a total of 114 entities and 0 collections);
+    13333 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2023-05-08 13:13:33 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:http-nio-8085-exec-3]- Session Metrics {
+    309831 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    183099 nanoseconds spent preparing 3 JDBC statements;
+    1584657 nanoseconds spent executing 3 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1328376 nanoseconds spent executing 1 flushes (flushing a total of 2 entities and 0 collections);
+    3163 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2023-05-08 13:13:46 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:http-nio-8085-exec-4]- Session Metrics {
+    374837 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    172754 nanoseconds spent preparing 1 JDBC statements;
+    7356522 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    3484 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2023-05-08 13:13:52 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:http-nio-8085-exec-5]- Session Metrics {
+    209129 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    128003 nanoseconds spent preparing 3 JDBC statements;
+    810201 nanoseconds spent executing 3 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    782943 nanoseconds spent executing 1 flushes (flushing a total of 2 entities and 0 collections);
+    2456 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2023-05-08 13:13:56 INFO  [org.hibernate.engine.internal.StatisticalLoggingSessionEventListener:http-nio-8085-exec-6]- Session Metrics {
+    231002 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    18733 nanoseconds spent preparing 1 JDBC statements;
+    298818 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    2482 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2023-05-08 13:14:15 INFO  [com.zaxxer.hikari.HikariDataSource:SpringApplicationShutdownHook]- HikariPool-1 - Shutdown initiated...
+2023-05-08 13:14:15 INFO  [com.zaxxer.hikari.HikariDataSource:SpringApplicationShutdownHook]- HikariPool-1 - Shutdown completed.

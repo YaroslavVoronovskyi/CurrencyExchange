@@ -1,4 +1,4 @@
-package com.gmail.voronovskyi.yaroslav.controller.dto;
+package com.gmail.voronovskyi.yaroslav.currencyexchange.controller.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -15,14 +15,14 @@ import java.io.Serializable;
 @NoArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class MonoBankDto implements Serializable {
+public class MinfinDto implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private String currencyCodeA;
-    private String currencyCodeB;
+    private String id;
+    private String pointDate;
     private String date;
-    private String rateSell;
-    private String rateBuy;
-    private String rateCross;
+    private String ask;
+    private String bid;
+    private String currency;
 }
