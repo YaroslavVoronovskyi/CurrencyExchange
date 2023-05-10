@@ -1,5 +1,6 @@
 package com.gmail.voronovskyi.yaroslav.currencyexchange.controller;
 
+import com.gmail.voronovskyi.yaroslav.currencyexchange.Constants;
 import com.gmail.voronovskyi.yaroslav.currencyexchange.controller.dto.MonoBankDto;
 import com.gmail.voronovskyi.yaroslav.currencyexchange.model.MonoBank;
 import com.gmail.voronovskyi.yaroslav.currencyexchange.service.IMonoBankService;
@@ -41,7 +42,7 @@ public class MonoBankRestController {
     @GetMapping
     @Produces(MediaType.APPLICATION_JSON_VALUE)
     public List<MonoBankDto> getAll() {
-        getDataFromSourceAndSaveToDb();
+        getDataFromSource();
         LOGGER.debug("Try get all monoBanks");
         return convertToDtoList(monoBankService.getAll());
     }
@@ -49,17 +50,23 @@ public class MonoBankRestController {
     @GetMapping("/search")
     @Consumes(MediaType.APPLICATION_JSON_VALUE)
     @Produces(MediaType.APPLICATION_JSON_VALUE)
-    public List<MonoBankDto> searchByDate(@Param("date") String date) {
+    public List<MonoBankDto> searchByDate(@Param(Constants.DATE) String date) {
         LOGGER.debug("Try search monoBanks by date {}", date);
         return convertToDtoList(monoBankService.search(date));
     }
 
-    private void getDataFromSourceAndSaveToDb() {
-        LOGGER.debug("Try get monoBanks from source and save");
-        String url = "https://api.monobank.ua/bank/currency";
+    private void getDataFromSource() {
+        LOGGER.debug("Try get monoBanks from source");
+        String url = Constants.MONOBANK_URL;
         MonoBankDto[] monosArray = restTemplate.getForObject(url, MonoBankDto[].class);
+        LOGGER.debug("MonoBanks was successfully got from source");
+        saveToDb(monosArray);
+    }
+
+    private void saveToDb(MonoBankDto[] monosArray) {
+        LOGGER.debug("Try save monoBanks from source to DB");
         monoBankService.save(convertToEntityList(Arrays.asList(monosArray)));
-        LOGGER.debug("MonoBanks was successfully got from source and saved");
+        LOGGER.debug("MonoBanks was successfully saved from source to DB");
     }
 
     private MonoBankDto convertToDto(MonoBank monoBank) {

@@ -1,5 +1,6 @@
 package com.gmail.voronovskyi.yaroslav.currencyexchange.controller;
 
+import com.gmail.voronovskyi.yaroslav.currencyexchange.Constants;
 import com.gmail.voronovskyi.yaroslav.currencyexchange.controller.dto.PrivatBankDto;
 import com.gmail.voronovskyi.yaroslav.currencyexchange.model.PrivatBank;
 import com.gmail.voronovskyi.yaroslav.currencyexchange.service.IPrivateBankService;
@@ -41,7 +42,7 @@ public class PrivatBankRestController {
     @GetMapping
     @Produces(MediaType.APPLICATION_JSON_VALUE)
     public List<PrivatBank> getAll() {
-        getDataFromSourceAndSaveToDb();
+        getDataFromSource();
         LOGGER.debug("Try get all privatBanks");
         return privateBankService.getAll();
     }
@@ -49,17 +50,23 @@ public class PrivatBankRestController {
     @GetMapping("/search")
     @Consumes(MediaType.APPLICATION_JSON_VALUE)
     @Produces(MediaType.APPLICATION_JSON_VALUE)
-    public List<PrivatBankDto> searchByDate(@Param("date") String date) {
+    public List<PrivatBankDto> searchByDate(@Param(Constants.DATE) String date) {
         LOGGER.debug("Try search privatBanks by date {}", date);
         return convertToDtoList(privateBankService.search(date));
     }
 
-    private void getDataFromSourceAndSaveToDb() {
-        LOGGER.debug("Try get privatBanks from source and save");
-        String url = "https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11";
+    private void getDataFromSource() {
+        LOGGER.debug("Try get privatBanks from source");
+        String url = Constants.PRIVATBANK_URL;
         PrivatBankDto[] privatBankDtosArray = restTemplate.getForObject(url, PrivatBankDto[].class);
+        LOGGER.debug("PrivatBanks was successfully got from source");
+        saveDataToDb(privatBankDtosArray);
+    }
+
+    private void saveDataToDb(PrivatBankDto[] privatBankDtosArray) {
+        LOGGER.debug("Try save privatBanks from source to DB");
         privateBankService.save(convertToEntityList(Arrays.asList(privatBankDtosArray)));
-        LOGGER.debug("PrivatBanks was successfully got from source and saved");
+        LOGGER.debug("PrivatBanks was successfully saved from source to DB");
     }
 
     private PrivatBankDto convertToDto(PrivatBank privatBank) {

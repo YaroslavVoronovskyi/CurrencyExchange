@@ -1,5 +1,6 @@
 package com.gmail.voronovskyi.yaroslav.currencyexchange.controller;
 
+import com.gmail.voronovskyi.yaroslav.currencyexchange.Constants;
 import com.gmail.voronovskyi.yaroslav.currencyexchange.controller.dto.MinfinDto;
 import com.gmail.voronovskyi.yaroslav.currencyexchange.model.Minfin;
 import com.gmail.voronovskyi.yaroslav.currencyexchange.service.IMinfinService;
@@ -41,7 +42,7 @@ public class MinfinRestController {
     @GetMapping
     @Produces(MediaType.APPLICATION_JSON_VALUE)
     public List<Minfin> getAll() {
-        getDataFromSourceAndSaveToDb();
+        getDataFromSource();
         LOGGER.debug("Try get all minfins");
         return minfinService.getAll();
     }
@@ -49,17 +50,23 @@ public class MinfinRestController {
     @GetMapping("/search")
     @Consumes(MediaType.APPLICATION_JSON_VALUE)
     @Produces(MediaType.APPLICATION_JSON_VALUE)
-    public List<MinfinDto> searchByDate(@Param("date") String date) {
+    public List<MinfinDto> searchByDate(@Param(Constants.DATE) String date) {
         LOGGER.debug("Try search minfins by date {}", date);
         return convertToDtoList(minfinService.search(date));
     }
 
-    private void getDataFromSourceAndSaveToDb() {
-        LOGGER.debug("Try get minfins from source and save");
-        String url = "https://api.minfin.com.ua/mb/f2ab12b3c7da7f83a4b71c0f0f5d7375364f407f/";
+    private void getDataFromSource() {
+        LOGGER.debug("Try get minfins from source");
+        String url = Constants.MINFIN_URL;
         MinfinDto[] minfinDtosArray = restTemplate.getForObject(url, MinfinDto[].class);
+        LOGGER.debug("Minfins was successfully got from source");
+        saveToDb(minfinDtosArray);
+    }
+
+    private void saveToDb(MinfinDto[] minfinDtosArray) {
+        LOGGER.debug("Try save minfins from source to DB");
         minfinService.save(convertToEntityList(Arrays.asList(minfinDtosArray)));
-        LOGGER.debug("Minfins was successfully got from source and saved");
+        LOGGER.debug("Minfins was successfully saved from source to DB");
     }
 
     private MinfinDto convertToDto(Minfin minfin) {
