@@ -14,12 +14,10 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.client.RestTemplate;
 
 import javax.persistence.EntityNotFoundException;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.Produces;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -30,19 +28,16 @@ public class MonoBankRestController {
     private static final Logger LOGGER = LoggerFactory.getLogger(MonoBankRestController.class);
     private final IMonoBankService monoBankService;
     private final ModelMapper modelMapper;
-    private final RestTemplate restTemplate;
 
     @Autowired
-    public MonoBankRestController(IMonoBankService monoBankService, ModelMapper modelMapper, RestTemplate restTemplate) {
+    public MonoBankRestController(IMonoBankService monoBankService, ModelMapper modelMapper) {
         this.monoBankService = monoBankService;
         this.modelMapper = modelMapper;
-        this.restTemplate = restTemplate;
     }
 
     @GetMapping
     @Produces(MediaType.APPLICATION_JSON_VALUE)
     public List<MonoBankDto> getAll() {
-        getDataFromSource();
         LOGGER.debug("Try get all monoBanks");
         return convertToDtoList(monoBankService.getAll());
     }
@@ -55,25 +50,11 @@ public class MonoBankRestController {
         return convertToDtoList(monoBankService.search(date));
     }
 
-    private void getDataFromSource() {
-        LOGGER.debug("Try get monoBanks from source");
-        String url = Constants.MONOBANK_URL;
-        MonoBankDto[] monosArray = restTemplate.getForObject(url, MonoBankDto[].class);
-        LOGGER.debug("MonoBanks was successfully got from source");
-        saveToDb(monosArray);
-    }
-
-    private void saveToDb(MonoBankDto[] monosArray) {
-        LOGGER.debug("Try save monoBanks from source to DB");
-        monoBankService.save(convertToEntityList(Arrays.asList(monosArray)));
-        LOGGER.debug("MonoBanks was successfully saved from source to DB");
-    }
-
     private MonoBankDto convertToDto(MonoBank monoBank) {
         try {
             return modelMapper.map(monoBank, MonoBankDto.class);
         } catch (MappingException exception) {
-            throw new EntityNotFoundException("MonoBankDto does not exist or has been deleted");
+            throw new EntityNotFoundException(Constants.MONOBANK_NOT_FOUND_MESSAGE);
         }
     }
 
@@ -81,7 +62,7 @@ public class MonoBankRestController {
         try {
             return modelMapper.map(monoBankDto, MonoBank.class);
         } catch (MappingException exception) {
-            throw new EntityNotFoundException("MonoBank does not exist or has been deleted");
+            throw new EntityNotFoundException(Constants.MONOBANK_NOT_FOUND_MESSAGE);
         }
     }
 

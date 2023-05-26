@@ -14,12 +14,10 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 import javax.persistence.EntityNotFoundException;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.Produces;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -30,21 +28,18 @@ public class MinfinRestController {
     private static final Logger LOGGER = LoggerFactory.getLogger(MinfinRestController.class);
     private final IMinfinService minfinService;
     private final ModelMapper modelMapper;
-    private final RestTemplate restTemplate;
 
     @Autowired
-    public MinfinRestController(IMinfinService minfinService, ModelMapper modelMapper, RestTemplate restTemplate) {
+    public MinfinRestController(IMinfinService minfinService, ModelMapper modelMapper) {
         this.minfinService = minfinService;
         this.modelMapper = modelMapper;
-        this.restTemplate = restTemplate;
     }
 
     @GetMapping
     @Produces(MediaType.APPLICATION_JSON_VALUE)
-    public List<Minfin> getAll() {
-        getDataFromSource();
+    public List<MinfinDto> getAll() {
         LOGGER.debug("Try get all minfins");
-        return minfinService.getAll();
+        return convertToDtoList(minfinService.getAll());
     }
 
     @GetMapping("/search")
@@ -55,25 +50,11 @@ public class MinfinRestController {
         return convertToDtoList(minfinService.search(date));
     }
 
-    private void getDataFromSource() {
-        LOGGER.debug("Try get minfins from source");
-        String url = Constants.MINFIN_URL;
-        MinfinDto[] minfinDtosArray = restTemplate.getForObject(url, MinfinDto[].class);
-        LOGGER.debug("Minfins was successfully got from source");
-        saveToDb(minfinDtosArray);
-    }
-
-    private void saveToDb(MinfinDto[] minfinDtosArray) {
-        LOGGER.debug("Try save minfins from source to DB");
-        minfinService.save(convertToEntityList(Arrays.asList(minfinDtosArray)));
-        LOGGER.debug("Minfins was successfully saved from source to DB");
-    }
-
     private MinfinDto convertToDto(Minfin minfin) {
         try {
             return modelMapper.map(minfin, MinfinDto.class);
         } catch (MappingException exception) {
-            throw new EntityNotFoundException("MinfinDto does not exist or has been deleted");
+            throw new EntityNotFoundException(Constants.MINFIN_NOT_FOUND_MESSAGE);
         }
     }
 
@@ -81,7 +62,7 @@ public class MinfinRestController {
         try {
             return modelMapper.map(minfinDto, Minfin.class);
         } catch (MappingException exception) {
-            throw new EntityNotFoundException("Minfin does not exist or has been deleted");
+            throw new EntityNotFoundException(Constants.MINFIN_NOT_FOUND_MESSAGE);
         }
     }
 

@@ -9,4 +9,5 @@ public interface IMonoBankService {
     List<MonoBank> getAll();
     void save(List<MonoBank> monoBanksList);
     List<MonoBank> search(String date);
+    List<MonoBank> getDataFromSource();
 }

@@ -9,4 +9,5 @@ public interface IMinfinService {
     List<Minfin> getAll();
     void save(List<Minfin> minfinsList);
     List<Minfin> search(String date);
+    List<Minfin> getDataFromSource();
 }

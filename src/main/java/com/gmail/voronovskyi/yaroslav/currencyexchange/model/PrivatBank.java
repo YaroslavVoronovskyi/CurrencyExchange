@@ -1,11 +1,11 @@
 package com.gmail.voronovskyi.yaroslav.currencyexchange.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
@@ -17,14 +17,12 @@ import java.io.Serializable;
 @Entity
 @Getter
 @Setter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 @EqualsAndHashCode
 @Table(name = "privats")
-public class PrivatBank implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+public class PrivatBank {
 
     @Id
     @GeneratedValue(generator = "uuid")
